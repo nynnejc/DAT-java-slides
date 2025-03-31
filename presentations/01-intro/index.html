@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Java 1. Semester</title>
+
+	<link rel="stylesheet" href="../../dist/reset.css">
+	<link rel="stylesheet" href="../../dist/reveal.css">
+	<link rel="stylesheet" href="../../dist/theme/white.css">
+
+	<link rel="stylesheet" href="../../plugin/highlight/dracula.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Java 1. Semester</h1>
+				<h5>Introduktion til programmering</h5>
+			</section>
+
+			<section>
+				<h2>Program</h2>
+				<ul>
+					<li>
+						<b>08:30</b> — Velkomst praktisk
+					</li>
+					<li>
+						<b>09:00</b> — Installer Java og IntelliJ
+					</li>
+					<li>
+						<b>10:00</b> — Pause
+					</li>
+					<li>
+						<b>10:15</b> — Hello World! Opgaver i studiengruppe
+					</li>
+					<li>
+						<b>11:00</b> — Compiler
+					</li>
+					<li>
+						<b>11:30</b> — Opsamling, forberedelse til næste gang
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Praktisk</h2>
+				<ul>
+					<li>
+						<a href="https://kea-fronter.itslearning.com/">Fronter</a>
+					</li>
+					<li>
+						<a href="https://books.trinket.io/thinkjava/">Link til gratis Java bog</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/learning/learning-java-17/">Linkedin Learning Java videoer</a>
+					</li>
+					<li>
+						<a href="https://dev.java/learn/">Oracle docs og materiale</a>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Inlay Hints</h2>
+
+			</section>
+
+			<section>
+				<h2>Nøglekoncepter
+				</h2>
+				<p>Programmering</p>
+				<p>Java</p>
+				<p>main()</p>
+				<p>“Hello World!” med Java</p>
+				<p>Terminal</p>
+				<p>IntelliJ</p>
+			</section>
+
+			<section>
+				<h2>Installere Java & IntelliJ
+				</h2>
+				<p>Installeringsguides findes på Fronter</p>
+				<p>Hvis du er hurtig eller allerede har installeret så benyt chancen for at hjælpe din medstuderende</p>
+			</section>
+
+			<section>
+				<h2>Programmering</h2>
+			</section>
+
+			<section>
+				<h2>Java er:</h2>
+				<ul>
+					<li>Class based / Object oriented</li>
+					<li>Platform uafhængig</li>
+					<li>General purpose / High level</li>
+					<li><b>W</b>rite <b>O</b>nce <b>R</b>un <b>A</b>nywhere</li>
+					<li>Compiler til bytecode</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Compiler</h2>
+				<blockquote>
+					<p><i>
+							Java applications are typically compiled to <a
+								href="https://en.wikipedia.org/wiki/Java_bytecode">bytecode</a> that can run on any <a
+								href="https://en.wikipedia.org/wiki/Java_virtual_machine">Java virtual machine</a>
+							(JVM) regardless of the underlying <a
+								href="https://en.wikipedia.org/wiki/Computer_architecture">computer architecture</a>.
+							The <a href="https://en.wikipedia.org/wiki/Syntax_(programming_languages)">syntax</a> of
+							Java is similar to C and C++, but has fewer <a
+								href="https://en.wikipedia.org/wiki/Low-level_programming_language">low-level</a>
+							facilities than either of them.
+						</i>
+					</p>
+				</blockquote>
+			</section>
+
+			<section>
+				<h2>Populær</h2>
+				<p>Nr. 2 meat populære sprog ved PopularitY of Programming Language Index (PYPL) søgning på google
+				</p>
+				<p>Anvendt bredt i industrien
+				</p>
+			</section>
+
+			<section>
+				<h2>Deler vandene…</h2>
+				<blockquote>
+					<i>“There are only two kinds of languages: the ones people complain about and the ones nobody uses.”
+					</i>
+				</blockquote>
+				<p>— Bjarne Stroustrup, skaberen af C++</p>
+			</section>
+
+			<section>
+				<h2>
+					<b>Class-based</b> & <b>object oriented</b>
+				</h2>
+			</section>
+
+			<section>
+				<h2>
+					<b>General purpose</b> & <b>High Level</b>
+				</h2>
+			</section>
+
+			<section>
+				<p>Write <b>Once</b></p>
+					<p>Run <b>Anywhere</b> & </p>
+					<p><b>Compiled</b> til <b>Bytecode</b></p>
+			</section>
+
+			<section>
+				<pre><code class="language-java" data-trim data-line-numbers>
+						// Mit første Java program!
+						public class HelloWorld {
+							public static void main(String[] args) {
+								System.out.println("Hello world!");
+							}
+						}
+					</code></pre>
+				</code>
+			</section>
+
+			<section>
+				<h2>main()</h2>
+				<ul>
+					<li><b>public</b>: <i>access modifier</i> gør metoden tilgængelig overalt i din application</li>
+					<li><b>static</b>: sørger for at gøre din metode til en class method i stedet for en instance method - uden at du behøver instanciere den først
+					</li>
+					<li><b>void</b>: metoden må ikke returnere noget - andet en void
+					</li>
+					<li><b>main()</b>: giver programmet et start punkt, kan ikke udføres uden</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Øvelse</h2>
+				<p><b>I studiegrupperne:</b></p>
+				<p>Skriv, compile og run: Hello World</p>
+			</section>
+
+			<section>
+				<h2>Shortcuts</h2>
+				<p><b>main</b> giver public static void main()</p>
+				<p><b>sout</b> giver System.out.println();</p>
+			</section>
+		</div>
+	</div>
+
+	<script src="../../dist/reveal.js"></script>
+	<script src="../../plugin/notes/notes.js"></script>
+	<script src="../../plugin/markdown/markdown.js"></script>
+	<script src="../../plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
