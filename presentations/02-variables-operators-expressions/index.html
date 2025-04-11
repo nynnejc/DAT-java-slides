@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Java 1. Semester</title>
+
+    <link rel="stylesheet" href="../../dist/reset.css">
+    <link rel="stylesheet" href="../../dist/reveal.css">
+    <link rel="stylesheet" href="../../dist/theme/white.css">
+
+    <link rel="stylesheet" href="../../plugin/highlight/dracula.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Variabler, Operatorer og Expressions
+                </h1>
+            </section>
+
+            <section>
+                <h2>Program</h2>
+                <ul>
+                    <li>
+                        <b>08:30</b> — Velkomst praktisk, slides
+                    </li>
+                    <li>
+                        <b>09:00</b> — Igang med øvelser i grupper
+                    </li>
+                    <li>
+                        <b>10:00</b> — Pause
+                    </li>
+                    <li>
+                        <b>10:15</b> — Øvelser fortsat
+                    </li>
+                    <li>
+                        <b>11:30</b> — Opsamling, forberedelse til næste gang
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Hvad vi skal gennemgå i dag
+                </h3>
+                <p>Variabler</p>
+                <p>Operatorer</p>
+                <p>Expressions</p>
+            </section>
+
+            <section>
+                <img src="./img/inlayhints.png" alt="Inlay hints">
+            </section>
+
+            <section>
+                <img src="./img/chatgpt.png" alt="chatgpt">
+            </section>
+
+            <section>
+                <h2>Variabel = beholder af en værdi
+                </h2>
+                <p style="font-size: 6rem;">int <b
+                        style="color: #FF0066; background-color: #fddffaff;">&nbsp;x&nbsp;</b>
+                    = 22;
+                </p>
+            </section>
+
+            <section>
+                <h2>Operator
+                    = symbol der udfører udregning
+                </h2>
+                <p style="font-size: 6rem;">3 <b style="color: #FF0066; background-color: #fddffaff;">&nbsp;+&nbsp;</b>
+                    5;
+                </p>
+            </section>
+
+            <section>
+                <h2 style="font-size: 3rem;">Expression = Simpel værdi eller sæt af operatorer der producerer en værdi
+                </h2>
+                <p style="font-size: 6rem; color: #FF0066; background-color: #fddffaff;">&nbsp;3 + 5;&nbsp;</b></p>
+            </section>
+
+            <section>
+                <h2>Variabler</h2>
+                <ul>
+                    <li>
+                        For at danne en variabel, skriver man først navnet på ens variabel.
+                    </li>
+                    <li>
+                        Derefter skriver man et lighedstegn = følgende med værdien man gerne vil definere ens variable
+                        med.
+                    </li>
+                    <li>
+                        <b>x</b> er en variabel.
+                    </li>
+                    <li>
+                        <b>=</b> kaldes en tildelingsoperator (assignment operator). Den tildeler værdien på højre side
+                        til variablen til venstre.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Variabler</h2>
+                <img src="./img/variabler.png" alt="variabler">
+            </section>
+
+            <section>
+                <h2>Variabler</h2>
+                <div style="font-size: 2rem;">
+                    <p>For at et program kan arbejde med data, er computeren nødt til at reservere en del af
+                        <b>hukommelsen</b> til arbejdet.
+                        Variablen skal have et navn, så det er muligt at henvise til den.
+                    </p>
+                    <p>En variabel kan grundlæggende bruges på tre måder:</p>
+                    <ol>
+                        <li>Den kan <b>erklæres</b>, hvilket betyder at der allokeres plads i hukommelsen samt gives et
+                            navn og en datatype.</li>
+                        <li>Den kan <b>tildeles</b> en værdi.</li>
+                        <li>Dens værdi kan <b>anvendes</b>.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section>
+                <h2>Hvad er en datatype?</h2>
+                <div style="font-size: 2rem;">
+                    <ul>
+                        <li>En datatype er en klassificering af hvilken typer data man har at gøre med.</li>
+                        <li>Primitive Data Typer:</li>
+                        <li><b>boolean</b>, som kan antage to sandhedsværdier, True for sandt, og False for falsk.</li>
+                        <li><b>int</b>, som repræsenterer heltal, fx -1, 2, 44, 42, 69</li>
+                        <li><b>float</b>, som er decimaltal, fx -1.12, 3.1415, 1.4423, 2/3</li>
+                        <li>Reference Data Type:</li>
+                        <li><b>string</b>, som er et stykke tekst, fx ”Se mor! Jeg koder i JAVA!” eller ”Jeg er 25 år
+                            gammel”</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Hvad er en datatype?</h2>
+                <img src="./img/datatype.png" alt="data type">
+            </section>
+
+            <section>
+                <img src="./img/data-table.png" alt="data table">
+            </section>
+
+            <section>
+                <h2>Naming convention</h2>
+                <ul>
+                    <li>Variabel navne må kun indeholde bogstaver, tal eller underscore_</li>
+                    <li>Variable er ”case-sensitive”, dvs <b
+                            style="font-family: monospace; color: #FF0066; background-color: #fddffaff;">TALLET_fem</b>
+                        og <b
+                            style="font-family: monospace; color: #FF0066; background-color: #fddffaff;">tallet_fem</b>
+                        er to forskellige variabler.</li>
+                    <li>Variabel navne skal være beskrivende.</li>
+                    <li>Hvis du har flere ord, kan du adskille ordene med en understregning, eller bruge camelCase.
+                    </li>
+                    <li>Ingen tomme mellemrum!</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Variabel Typer</h2>
+                <img src="./img/variabel-kasser.png" alt="variabel kasser">
+            </section>
+
+            <section>
+                <h2>Printe Variabler</h2>
+                <div class="r-hstack" style="gap: 2rem;">
+                    <pre><code class="language-java" data-trim >
+                        int salary = 400000;
+                        System.out.println(salary);
+					</code></pre>
+                    </code>
+                    <img src="./img/konsol.png" alt="konsol">
+                </div>
+            </section>
+
+            <section>
+                <h2>Kode Kommentar</h2>
+                <ul style="font-size: 2rem;">
+                    <li>En tekstlinje som starter med //</li>
+                    <li>Computeren ikke kan oversætte det. (hoppe over)</li>
+                    <li>Det gør det nemmere for en selv og andre at huske: hvordan koden virker, hvad ens kode betyder.
+                    </li>
+                    <li>Til at udkommentere ens kode, hvis det f.eks. ikke skal bruges på nuværende tidspunkt, men måske
+                        senere.</li>
+                    <li>Hvad man mangler at programmere, hvilke fejl der er.</li>
+                    <li>Hvad mangler der i koden.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>final</h2>
+                <pre><code class="language-java" data-trim >
+                final String name = "Nynne";
+                name = "Dorte"; // Java throws an error!!
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Operators & Expressions</h2>
+                <p>An <b>expression</b> is a simple value or a set of operations that produce a value.</p>
+                <p style="font-size: 6rem;">3 <b style="color: #FF0066; background-color: #fddffaff;">&nbsp;+&nbsp;</b>
+                    5;
+                </p>
+            </section>
+
+            <section>
+                <h2>Operators & Expressions</h2>
+                <p>An expression is a simple value or a set of <b>operations</b> that produce a value.</p>
+            <ul>
+                <li><b
+                    style="font-family: monospace; color: #FF0066; background-color: #fddffaff;">+</b> addition</li>
+                <li><b
+                    style="font-family: monospace; color: #FF0066; background-color: #fddffaff;">-</b> subtraction</li>
+                <li><b
+                    style="font-family: monospace; color: #FF0066; background-color: #fddffaff;">*</b> multiplication</li>
+                <li><b
+                    style="font-family: monospace; color: #FF0066; background-color: #fddffaff;">/</b> division</li>
+                <li><b
+                    style="font-family: monospace; color: #FF0066; background-color: #fddffaff;">%</b> modulus</li>
+            </ul>
+            </section>
+
+            <section>
+                <h2>Mere komplekse Expressions</h2>
+                <pre><code class="language-java" data-trim >
+                    result = 3 * 5 / 5 + 1 
+                    // will this java code run??
+                    </code></pre>
+                    <img src="./img/kompleks-expression.png" alt="kompleks expression">
+            </section>
+
+            <section>
+                <h2>Rækkefølge på operations</h2>
+                    <img src="./img/order-operations.png" alt="rækkefølge på operations">
+            </section>
+
+            <section>
+                <h2>main</h2>
+                <ul>
+                    <li>
+                        <b>public</b> access modifier gør metoden tilgængelig overalt i din application.
+                    </li>
+                    <li>
+                        <b>static</b> sørger for at gøre din metode til en class method i stedet for en instance method - uden at du behøver instanciere den først.
+                    </li>
+                    <li>
+                        <b>void</b> metoden må ikke returnere noget - andet end void.
+                    </li>
+                    <li>
+                        <b>main()</b> giver programmet et start punkt, kan ikke udføres uden.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+				<h2>Shortcuts</h2>
+				<div class="r-hstack" style="gap: 2rem;">
+					<div>
+						<img src="./img/shortcut1.png" alt="IntelliJ Shortcuts">
+						<p><b>main</b> giver public static void main()</p>
+					</div>
+					<div>
+						<img src="./img/shortcut2.png" alt="IntelliJ Shortcuts">
+						<p><b>sout</b> giver System.out.println();</p>
+					</div>
+				</div>
+			</section>
+
+        </div>
+    </div>
+
+    <script src="../../dist/reveal.js"></script>
+    <script src="../../plugin/notes/notes.js"></script>
+    <script src="../../plugin/markdown/markdown.js"></script>
+    <script src="../../plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
