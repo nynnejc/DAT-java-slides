@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Java 1. Semester</title>
+
+    <link rel="stylesheet" href="../../dist/reset.css">
+    <link rel="stylesheet" href="../../dist/reveal.css">
+    <link rel="stylesheet" href="../../dist/theme/white.css">
+
+    <link rel="stylesheet" href="../../plugin/highlight/dracula.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Conditionals & Booleans</h1>
+            </section>
+
+            <section>
+                <h2>Opsamling på metoder</h2>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                    public class Metode {
+                        public static void main(String[] args) {
+                            //main er en metode, som vi nu er vant til at bruge
+                            System.out.println("Dette her er også en metode!");
+                        }
+                    }                                                                                                     
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>metoder</h2>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                    public class MegetLangtMetodenavnMaaskeFindpaaNogetKortereMenDetSkalVaerePascalCase {
+                        public static void main(String[] args) {
+                            // er main metoden et krav?
+                            // skal alle klasser have en main metode?
+                        }
+                        // kan man skrive kode her?
+                    }                                                                            
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Metoder</h2>
+                <ul>
+                    <li>main metoden er ikke et krav i ALLE klasser.
+                    </li>
+                    <li>Derimod er det et krav at ÉN klasse i dit program er: <b
+                            style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">public</b>
+                        og
+                        <b
+                            style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">main</b>
+                        og har returtypen <b
+                            style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">void</b>.
+                    </li>
+                    <li>-og accepterer et array af Strings <b
+                            style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">(String[]
+                            args)</b> som eneste parameter
+                    </li>
+                    <li>Det <b>ER</b> muligt at skrive al din kode inde i en main klasse.</li>
+                    <li>Men det er en dårlig praksis! Vi skal bryde koden op i metoder der hver har et job, for at koden
+                        er
+                        mere robust og DRY
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Metode Anatomi</h2>
+                <img src="img/metode-anatomi.png" alt="metode anatomi">
+                <p><b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">ReturType></b>
+                    int, double, boolean osv.</p>
+                <p><b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">MetodeNavn</b>
+                    Vi vælger selv navnet. Skal være CamelCase.</p>
+                <p><b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">ParameterT</b>
+                    String, int osv.</p>
+                <p><b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">ParameterN</b>
+                    Vi vælger selv navnet.</p>
+
+            </section>
+
+            <section>
+                <h2>Forskellige Typer af metoder</h2>
+                <p>Der findes forskellige typer af metoder i Java</p>
+                <pre><code class="language-java">
+                    public class MegetLangtMetodenavnDetSkalVaerePascalCase {
+                        // void metoder uden parametre
+                        System.out.println();
+                        
+                        // void metoder med parametre
+                        System.out.println(“Hello World!”);
+                        
+                        // Metoder der returnerer værdier uden parametre
+                        scanner.nextline();
+                        
+                        // Metoder der returnerer værdier med parametre
+                        sentence.replace(““, “.java”);
+                    }                                                                     
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>void metode uden parametre</h2>
+                <p>En <b>void</b> metode er en metode uden returværdi.
+                    Uden parametre betyder at vi ikke “sender” noget til metoden:</p>
+
+                <pre><code class="language-java">
+                        public class MetodeEksempelVoidIngenParametre {
+                            // Metode der printer hilsen
+                            public static void printGreeting(){
+                                System.out.println("Hej, Datamatikere!");
+                            }
+                            public static void main(String[] args) {
+                                // Nu kalder vi på metoden
+                                printGreeting();
+                            }
+                         }                                                                                              
+                    </code></pre>
+            </section>
+
+            <section>
+                <h2>void metode med parametre</h2>
+                <p>Bemærk at vores main metode giver firstName som input til greetPerson. I selve greetPerson, hedder
+                    parameteren name.
+                    Vi kan kalde parameteren inde i vores greetPerson lige hvad der passer os
+                </p>
+
+                <pre><code class="language-java">
+                        public class MetodeEksempelVoidMedParameter {
+                            // void metode med parameter
+                            public static void greetPerson(String name){
+                                System.out.println("Hej, " + name);
+                            }
+                            public static void main(String[] args) {
+                                String firstname = "Ulla";
+                                greetPerson(firstname);
+                            }
+                         }                                                                                                                      
+                    </code></pre>
+            </section>
+
+            <section>
+                <h2>metode med returværdi uden parametre</h2>
+
+                <pre><code class="language-java">
+                        public class MetodeEksempelMedReturvaerdiUdenParametre {
+                            // metoden returnerer en int og har ingen input
+                            public static int getSomeNumber(){
+                                int someNumberFromCalculation = 12;
+                                return someNumberFromCalculation;
+                            }
+                            public static void main(String[] args) {
+                                int someNumber = getSomeNumber();
+                                System.out.println("Resultatet er: " + someNumber);
+                            }
+                         }                                                                                                                                              
+                    </code></pre>
+            </section>
+
+            <section>
+                <h2>metode med returværdi med parametre</h2>
+                <pre><code class="language-java">
+                        public class MetodeEksempelMedReturvaerdiMedParametre {
+                            // metoden returnerer en string med parametre
+                            public static String getFullName(String firstName, String lastName){
+                                String fullName = firstName + " " + lastName;
+                                return fullName;
+                            }
+                            public static void main(String[] args) {
+                                String firstName = "Ada";
+                                String lastName = "Lovelace";
+                                String fullName = getFullName(firstName, lastName);
+                                System.out.println("Hello " + fullName);
+                            }
+                        }                                                                                                                                              
+                    </code></pre>
+            </section>
+
+            <section>
+                <h2>static vs non-static methods</h2>
+                <p>Hvorfor er der forskellige måder at kalde metoder på?</p>
+                <pre><code class="language-java">
+                    System.out.println("Hello World!");
+                    Scanner scanner = new Scanner(System.in)
+                    scanner.nextLine();                                                                                                    
+                </code></pre>
+                <h4>static vs non-static</h4>
+                <ul>
+                    <li>static metoder kaldes direkte uden at oprette et objekt (de tilhører klassen) - eksempel Hello
+                        World.</li>
+                    <li>non-static metoder kræver et objekt for at blive kaldt (de tilhører et specifikt objekt) -
+                        eksempel Scanner.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>static vs non-static methods</h2>
+                <pre><code class="language-java">
+                    System.out.println("Hello World!");
+                    Scanner scanner = new Scanner(System.in)
+                    scanner.nextLine();                                                                                                    
+                </code></pre>
+                <p>println() er en statisk metode fra System.out, så vi kan kalde den uden at oprette et objekt (dvs. bruge new)</p>
+                <p>nextLine() er en non-static metode fra Scanner klassen, så vi er nødt til at oprette et objekt (scanner) for at bruge den.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="../../dist/reveal.js"></script>
+    <script src="../../plugin/notes/notes.js"></script>
+    <script src="../../plugin/markdown/markdown.js"></script>
+    <script src="../../plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Java 1. Semester</title>
+
+    <link rel="stylesheet" href="../../dist/reset.css">
+    <link rel="stylesheet" href="../../dist/reveal.css">
+    <link rel="stylesheet" href="../../dist/theme/white.css">
+
+    <link rel="stylesheet" href="../../plugin/highlight/dracula.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Input og Output</h1>
+                <h2>Håndtering af logik med <b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">if</b></h2>
+            </section>
+
+            <section>
+                <h1>I/O</h1>
+                <img src="img/input-output-visualisering.png" alt="Input og Output visualisering">
+            </section>
+
+            <section>
+                <img src="img/io-flybillet.png" alt="Input og Output visualisering">
+            </section>
+
+            <section>
+                <img src="img/io-process.png" alt="Input og Output visualisering">
+            </section>
+
+            <section>
+                <h2>System Class</h2>
+                <ul>
+                    <li>
+                        Interaktion med OS
+                    </li>
+                    <li>
+                        System class indeholder bl.a.
+                    </li>
+                    <li>
+                        <pre><code class="language-java" data-trim >
+                            InputStream in; (input.nextInt());                     
+                            </code></pre>
+                    </li>
+                    <li>
+                        <pre><code class="language-java" data-trim >
+                            PrintStream out; (System.out.println)                    
+                            </code></pre>
+                    </li>
+                    <li>Filer</li>
+                    <li>Input fra brugeren</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>System Class</h2>
+                <p>Among the facilities provided by the <b>System class</b> are standard input, standard output, and
+                    error
+                    output streams; access to externally defined properties and environment variables; a means of
+                    loading files and libraries; and a utility method for quickly copying a portion of an array.</p>
+                    <p>Oracle documentation</p>
+            </section>
+
+            <section>
+                <h2>Scanner Class</h2>
+                <p>Du skal også <b>initialize</b> et instans af din Scanner, før du kan bruge den:</p>
+                <pre><code class="language-java" data-trim >
+                    import java.util.Scanner;
+
+                    public class Example {
+                        public static void main(String[] args) {
+                            Scanner sc = new Scanner(System.in)
+                        }
+                    }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Scanner Class</h2>
+                <p>Du kan tilgå brugerens input med metoden <b>nextLine</b> og gemme input i et variabelnavn:</p>
+                <pre><code class="language-java" data-trim >
+                    myVariableName = input.nextLine();
+                    </code></pre>
+            </section>
+
+            <section>
+                <h2>Scanner Types</h2>
+                <pre><code class="language-java" data-trim >
+                    String myVariableName = input.nextLine();
+                    //
+                    input.nextInt();
+                    //
+                    input.nextDouble();
+                    </code></pre>
+            </section>
+
+            <section>
+                <h2>Comments</h2>
+                <pre><code class="language-java" data-trim >
+                    public class Example {
+                        public static void main(String[] args) {
+                            // Her er en linje kode kommentar
+                     
+                            /*
+                            Her er der
+                            flere linjer
+                            med kode kommentarer!
+                             */
+                            int myNumber = 1;
+                            // String myString = "hej!";
+                        }
+                     }                     
+                    </code></pre>
+            </section>
+
+            <section>
+                <h2>Pseudokode</h2>
+                <ul>
+                    <li>Beskrivelse af algoritme</li>
+                    <li>Uformel skitsering af program</li>
+                    <li>Redskab til at danne overblik</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Divide and Conquer</h2>
+                <pre><code class="language-java" data-trim >
+                    public class FahrenheitConverter {
+                        public static void main(String[] args) {
+                            // Convert 100 Fahrenheit to celsius
+                     
+                            // Start with Fahrenheit (e.g., 100 degrees)
+                            // Subtract 32 from this number (100 - 32 = 68)
+                            // Divide answer by 1.8 (68 / 1.8 = 37.78)
+                            // Print the result
+                        }
+                     }                                       
+                    </code></pre>
+            </section>
+
+            <section>
+                <pre><code class="language-java" data-trim >
+                    public class FahrenheitConverter {
+                        public static void main(String[] args) {
+                            // Convert 100 Fahrenheit to celsius
+                     
+                            // Start with Fahrenheit (e.g., 100 degrees)
+                            int startTemperatureFahrenheit = 100;
+                     
+                            // Subtract 32 from this number (100 - 32 = 68)
+                            // Divide answer by 1.8 (68 / 1.8 = 37.78)
+                            // Print the result
+                        }
+                     }                                  
+                    </code></pre>
+            </section>
+
+            <section>
+                <pre><code class="language-java" data-trim >
+                    public static void main(String[] args) {
+                        // Convert 100 Fahrenheit to celsius
+                     
+                        // Start with Fahrenheit (e.g., 100 degrees)
+                        int startTemperatureFahrenheit = 100;
+                     
+                        // Subtract 32 from this number (100 - 32 = 68)
+                        int middlePoint = startTemperatureFahrenheit - 32;
+                     
+                        // Divide answer by 1.8 (68 / 1.8 = 37.78)
+                        // Print the result
+                     }                            
+                    </code></pre>
+            </section>
+
+            <section>
+                <h2>if</h2>
+                <h2>else if</h2>
+            </section>
+
+            <section>
+                <h2>If else struktur:</h2>
+                <p>Betinget udførelse med to muligheder:</p>
+                <div class="r-hstack" style="gap: 2rem;">
+                <pre><code class="language-java" data-trim >
+                    if(color.equals("rød")){
+                        System.out.println("Rødt lys");
+                     }
+                     else{
+                        System.out.println("Grønt lys");
+                     }                     
+                </code></pre>
+                <img src="img/to-lys.png" alt="lyskryds">
+                </div>
+            </section>
+
+            <section>
+                <h2>If – else if - Sammenkædning (chaining)</h2>
+                <p>Betinget udførelse med mere end to muligheder:</p>
+                <div class="r-hstack" style="gap: 2rem;">
+                    <pre><code class="language-java" data-trim >
+                        if(color.equals("rød")){
+                            System.out.println("Rødt lys");
+                        }
+                        else if (color.equals("gul")){
+                            System.out.println("Gult lys");
+                        } else {
+                            System.out.println("Grønt lys");
+                        }                                        
+                    </code></pre>
+                    <img src="img/tre-lys.png" alt="lyskryds">
+                <br>
+                </div>
+            </section>
+
+            <section>
+                <h2>To måder at lave betingelser på</h2>
+                <img src="img/chaining-nesting.png" alt="chaining vs. nesting">
+            </section>
+
+            <section>
+                <h2>Indlejrede If sætninger (nesting)</h2>
+                <div class="r-hstack" style="gap: 2rem;">
+                    <img src="img/nesting-1.png" alt="chaining vs. nesting">
+                    <img src="img/nesting-2.png" alt="chaining vs. nesting">
+                </div>
+                <p>Indlejrede if sætninger er meget almindelige, men de bliver hurtigt svære at læse. Her bliver god
+                    indrykning vigtig for læsbarheden.
+                </p>
+            </section>
+
+            <section>
+                <h2>Boolske Operatorer</h2>
+                <img src="img/boolsk-table.png" alt="boolske operatorer">
+            </section>
+        
+            <section>
+                <h2>Eksempel  - &&</h2>
+                <img src="img/&&.png" alt="&& operator">
+            </section>
+
+            <section>
+                <h2>Eksempel  - ||</h2>
+                <img src="img/||.png" alt="|| operator">
+            </section>
+        </div>
+    </div>
+
+    <script src="../../dist/reveal.js"></script>
+    <script src="../../plugin/notes/notes.js"></script>
+    <script src="../../plugin/markdown/markdown.js"></script>
+    <script src="../../plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

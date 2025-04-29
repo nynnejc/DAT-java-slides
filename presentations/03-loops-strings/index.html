@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Java 1. Semester</title>
+
+    <link rel="stylesheet" href="../../dist/reset.css">
+    <link rel="stylesheet" href="../../dist/reveal.css">
+    <link rel="stylesheet" href="../../dist/theme/white.css">
+
+    <link rel="stylesheet" href="../../plugin/highlight/dracula.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>For Loops & While Loops
+                </h1>
+            </section>
+
+            <section>
+                <h2>Hvad vi skal gennemgå i dag</h2>
+                <ul>
+                    <li>
+                        Hvad er loops
+                    </li>
+                    <li>
+                        For loop
+                    </li>
+                    <li>
+                        While loop
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Hvad er loops?</h2>
+            </section>
+
+            <section>
+                <quote>
+                    <p><b>Programmet</b> skal gøre <b>[noget]</b>
+                        <b>[x]</b> antal gange
+                    </p>
+                </quote>
+            </section>
+
+            <section>
+                <h2>for loop</h2>
+                <pre><code class="language-java" data-trim >
+                    for (int i = 0; i < 10; i++ ) {
+                        System.out.println("Hello World!");
+                    }
+                    </code></pre>
+            </section>
+
+            <section>
+                <h2>For Loop “signatur”</h2>
+                    <ul>
+                        <li>For loops bruges <b>når du ved</b> hvor mange iterationer skal bruges
+                        Incremental counter / iteration</li>
+                        <li>Kan også være decremental</li>
+                        <li>Counter variable kan bruges inde i scope of the loop</li>
+                    </ul>
+                    <img src="./img/loop-signatur.png" alt="loop signatur">
+            </section>
+
+            <section>
+                <p>For-loops bruges til at køre et stykke kode et <b>bestemt antal gange</b>.</p>
+                <p>Man plejer at lave en variablen, der hedder i, der fungerer som en tæller.</p>
+                <p>Derudover har man en betingelse. Så længe betingelsen er sand, kører koden.</p>
+            </section>
+
+            <section>
+                <h2><b
+                    style="font-family: monospace; color: #FF0066; background-color: #fddffaff;">i++</b> er det samme som at skrive <b
+                    style="font-family: monospace; color: #FF0066; background-color: #fddffaff;">i = i + 1;</b></h2>
+            </section>
+
+            <section>
+                <img src="./img/loop-visualisering.png" alt="loop visualisering">
+            </section>
+
+
+            <section>
+                <h2>for loop</h2>
+                <pre><code class="language-java" data-trim >
+                    for (int i = 0; i < 10; i++){
+                        System.out.println("printing for the " + i + "th time!");
+                     }                     
+                    </code></pre>
+            </section>
+
+            <section>
+                <h2>While Loop</h2>
+            </section>
+
+            <section>
+                <h2>While Loop “signatur”</h2>
+                <p>While loops sætter en <b>betingelse</b> og udfører det kode der er defineert inde i dets scope, indtil betingelsen er <b>false</b></p>
+                <pre><code class="language-java" data-trim >
+                    while (condition){
+                        // code block to be executed
+                     }                     
+                    </code></pre>
+            </section>
+
+            <section>
+                <p><b>While-loops</b> bruges til at køre et stykke kode flere gange.</p>
+                <p>Man plejer at lave en variablen, der hedder <b
+                    style="font-family: monospace; color: #FF0066; background-color: #fddffaff;">i</b>, der fungerer som en tæller.</p>
+                <p>Derudover har man en betingelse.</p>
+                <p>Så længe betingelsen er sand, kører koden.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="../../dist/reveal.js"></script>
+    <script src="../../plugin/notes/notes.js"></script>
+    <script src="../../plugin/markdown/markdown.js"></script>
+    <script src="../../plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
